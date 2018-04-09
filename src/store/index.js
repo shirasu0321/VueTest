@@ -36,17 +36,44 @@ const Head = {
   }
 }
 
+const TextArea = {
+  namespaced: true,
+  state: {
+    errorMsg: "必須入力です"
+  },
+  getters: {
+    getError (state, getters, rootState) {
+      if (rootState.errorFlag) {
+        return null
+      } else {
+        return state.errorMsg
+      }
+    }
+  }
+}
+
 export default new Vuex.Store({
   state: {
-    stepCount: 0
+    stepCount: 0,
+    impression: "",
+    errorFlag: false
   },
   mutations: {
     setStepCount (state) {
       state.stepCount++
+    },
+    updateImpression (state, value) {
+      state.impression = value
+      if (state.impression) {
+        state.errorFlag = true
+      } else {
+        state.errorFlag = false
+      }
     }
   },
   modules: {
     Form,
-    Head
+    Head,
+    TextArea
   }
 })
