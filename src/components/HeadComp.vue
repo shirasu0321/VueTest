@@ -7,9 +7,11 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'headComp',
-  computed: mapGetters('Head', {
-    'title': 'getTitle'
-  })
+  computed: {
+    ...mapGetters('Head', {
+      'title':'getTitle'
+    })
+  }
 }
 </script>
 
