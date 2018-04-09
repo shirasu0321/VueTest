@@ -4,7 +4,7 @@
     <head-comp></head-comp>
     <textarea-comp></textarea-comp>
     <string-comp></string-comp>
-    <button>{{button}}</button>
+    <button v-on:click="buttonAction">{{button}}</button>
   </div>
 </template>
 
@@ -12,6 +12,7 @@
 import HeadComp from '@/components/HeadComp'
 import TextareaComp from '@/components/TextareaComp'
 import StringComp from '@/components/StringComp'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'form',
@@ -20,6 +21,9 @@ export default {
       button: '確認'
     }
   },
+  methods: mapActions('Form', {
+    'buttonAction': 'buttonAction'
+  }),
   components: {
     HeadComp,
     TextareaComp,
