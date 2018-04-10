@@ -13,7 +13,7 @@ export default {
         datasets: [
           {
             label: 'Test Results in the last six month',
-            backgroundColor: '#f87979',
+            backgroundColor: 'rgba(56,186,140,0.4)',
             pointBackgroundColor: 'white',
             borderWidth: 1,
             bointBorderColor: '#249EBF',

@@ -11,7 +11,8 @@
         <bar-chart></bar-chart>
       </div>
       <div class="column">
-        <h3>Circle Chart</h3>
+        <h3>Pie Chart</h3>
+        <pie-chart></pie-chart>
       </div>
     </div>
     <div class="columns">
@@ -20,7 +21,8 @@
         <line-chart></line-chart>
       </div>
       <div class="column">
-        <h3>Line Chart2</h3>
+        <h3>HrizentalBar Chart</h3>
+        <horizontal-bar></horizontal-bar>
       </div>
     </div>
   </section>
@@ -29,12 +31,16 @@
 <script>
 import BarChart from '@/components/BarChart'
 import LineChart from '@/components/LineChart'
+import HorizontalBar from '@/components/HorizontalBar'
+import PieChart from '@/components/PieChart'
 
 export default {
   name: 'VueChartJS',
   components: {
     BarChart,
-    LineChart
+    LineChart,
+    HorizontalBar,
+    PieChart
   }
 }
 </script>

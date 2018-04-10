@@ -20,7 +20,7 @@ export default ({
         datasets: [
           {
             label: 'Test Results',
-            backgroundColor: '#f87979',
+            backgroundColor: '#96e412',
             data: [60, 90, 70]
           }
         ]
