@@ -2,8 +2,7 @@
   <div> 
     Formページ
     <head-comp></head-comp>
-    <textarea-comp></textarea-comp>
-    <string-comp></string-comp>
+    <component :is="isComponent"></component>
     <button v-on:click="buttonAction">{{button}}</button>
   </div>
 </template>
@@ -19,9 +18,12 @@ export default {
   methods: mapActions('Form', {
     'buttonAction': 'buttonAction'
   }),
-  computed: mapGetters('Form', {
-    'button': 'getButton'
-  }),
+  computed: {
+    ...mapGetters('Form', {
+      'button': 'getButton',
+      'isComponent': 'GetComponent'
+    })
+  },
   components: {
     HeadComp,
     TextareaComp,

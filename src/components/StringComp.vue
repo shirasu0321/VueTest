@@ -3,12 +3,13 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'stringComp',
-  data () {
-    return {
-      string: '入力された感想を表示'
-    }
+  computed: {
+    ...mapGetters('String', {
+      'string': 'getString'
+    })
   }
 }
 </script>
