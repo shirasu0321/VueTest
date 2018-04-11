@@ -1,3 +1,5 @@
 <template>
-  <div>何かを設定するよ</div>
+   <v-container>
+    <div>Please wait...</div>
+  </v-container>
 </template>

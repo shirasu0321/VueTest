@@ -3,7 +3,7 @@
     <v-app id="inspire">
       <header-area></header-area>
       <menubar-area></menubar-area>
-      <router-view></router-view>
+      <content-area></content-area>
       <footer-area></footer-area>
     </v-app>
   </div>
@@ -13,12 +13,14 @@
 import HeaderArea from '@/components/global/HeaderArea'
 import MenubarArea from '@/components/global/MenubarArea'
 import FooterArea from '@/components/global/FooterArea'
+import ContentArea from '@/components/global/ContentArea'
 
 export default {
   components: {
     HeaderArea,
     MenubarArea,
-    FooterArea
+    FooterArea,
+    ContentArea
   }
 }
 </script>
@@ -30,6 +32,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 200px;
+  align-content: center;
+}
+.content {
+  align-content: center;
 }
 </style>
