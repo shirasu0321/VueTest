@@ -2,8 +2,9 @@
   <div id="app">
     <v-app id="inspire">
       <header-area></header-area>
-    <menubar-area></menubar-area>
-    <footer-area></footer-area>
+      <menubar-area></menubar-area>
+      <router-view></router-view>
+      <footer-area></footer-area>
     </v-app>
   </div>
 </template>
@@ -23,5 +24,12 @@ export default {
 </script>
 
 <style>
-
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 200px;
+}
 </style>

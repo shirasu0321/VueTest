@@ -15,6 +15,12 @@ const Head = {
 
 const Menu = {
   namespaced: true,
+  actions: {
+    changePage ({ commit, state, rootState }, value) {
+      router.push(value)
+      commit('drawMenu', null, {root: true})
+    }
+  },
   getters: {
     getDraw (State, getters, rootState) {
       return rootState.isDraw
@@ -24,11 +30,15 @@ const Menu = {
 
 export default new Vuex.Store({
   state: {
-    isDraw: true
+    isDraw: true,
+    pageRoot: '/'
   },
   mutations: {
     drawMenu (state) {
       state.isDraw = !state.isDraw
+    },
+    getRoot (state, value) {
+      state.pageRoot = value
     }
   },
   modules: {
