@@ -30,7 +30,7 @@ const Menu = {
 
 export default new Vuex.Store({
   state: {
-    isDraw: true,
+    isDraw: false,
     pageRoot: '/'
   },
   mutations: {
